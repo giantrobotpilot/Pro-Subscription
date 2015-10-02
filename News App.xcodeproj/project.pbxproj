@@ -15,6 +15,8 @@
 		DD9B73C81BBEE28200AB2E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9B73C71BBEE28200AB2E6A /* Assets.xcassets */; };
 		DD9B73CB1BBEE28200AB2E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9B73C91BBEE28200AB2E6A /* LaunchScreen.storyboard */; };
 		DD9B73D61BBEE28300AB2E6A /* News_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B73D51BBEE28300AB2E6A /* News_AppTests.m */; };
+		DD9B73E11BBEF60600AB2E6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B73E01BBEF60600AB2E6A /* StoreKit.framework */; };
+		DD9B73E41BBEF77500AB2E6A /* ProSubscriptionService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B73E31BBEF77500AB2E6A /* ProSubscriptionService.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		DD9B73D11BBEE28300AB2E6A /* News AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9B73D51BBEE28300AB2E6A /* News_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = News_AppTests.m; sourceTree = "<group>"; };
 		DD9B73D71BBEE28300AB2E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9B73E01BBEF60600AB2E6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DD9B73E21BBEF77500AB2E6A /* ProSubscriptionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProSubscriptionService.h; sourceTree = "<group>"; };
+		DD9B73E31BBEF77500AB2E6A /* ProSubscriptionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProSubscriptionService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9B73E11BBEF60600AB2E6A /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,7 @@
 		DD9B73AC1BBEE28200AB2E6A = {
 			isa = PBXGroup;
 			children = (
+				DD9B73E01BBEF60600AB2E6A /* StoreKit.framework */,
 				DD9B73B71BBEE28200AB2E6A /* News App */,
 				DD9B73D41BBEE28300AB2E6A /* News AppTests */,
 				DD9B73B61BBEE28200AB2E6A /* Products */,
@@ -87,6 +94,8 @@
 				DD9B73BC1BBEE28200AB2E6A /* AppDelegate.m */,
 				DD9B73BE1BBEE28200AB2E6A /* ViewController.h */,
 				DD9B73BF1BBEE28200AB2E6A /* ViewController.m */,
+				DD9B73E21BBEF77500AB2E6A /* ProSubscriptionService.h */,
+				DD9B73E31BBEF77500AB2E6A /* ProSubscriptionService.m */,
 				DD9B73C11BBEE28200AB2E6A /* Main.storyboard */,
 				DD9B73C71BBEE28200AB2E6A /* Assets.xcassets */,
 				DD9B73C91BBEE28200AB2E6A /* LaunchScreen.storyboard */,
@@ -163,6 +172,12 @@
 				TargetAttributes = {
 					DD9B73B41BBEE28200AB2E6A = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = J2Y77U9RAN;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					DD9B73D01BBEE28300AB2E6A = {
 						CreatedOnToolsVersion = 7.0;
@@ -214,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9B73E41BBEF77500AB2E6A /* ProSubscriptionService.m in Sources */,
 				DD9B73C01BBEE28200AB2E6A /* ViewController.m in Sources */,
 				DD9B73BD1BBEE28200AB2E6A /* AppDelegate.m in Sources */,
 				DD9B73C61BBEE28200AB2E6A /* News_App.xcdatamodeld in Sources */,
@@ -345,10 +361,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "News App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wallst.News-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,10 +375,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "News App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wallst.News-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
