@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <StoreKit/StoreKit.h>
 
-@interface ProSubscriptionService : NSObject
+@interface ProSubscriptionService : NSObject <SKProductsRequestDelegate, SKRequestDelegate>
+
+- (void)requestProducts;
 
 @end

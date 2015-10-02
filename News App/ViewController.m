@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ProSubscriptionService.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) ProSubscriptionService *store;
 
 @end
 
@@ -16,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.store = [[ProSubscriptionService alloc] init];
+    [self.store requestProducts];
 }
 
 - (void)didReceiveMemoryWarning {

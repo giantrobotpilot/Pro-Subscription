@@ -16,7 +16,7 @@
 		DD9B73CB1BBEE28200AB2E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9B73C91BBEE28200AB2E6A /* LaunchScreen.storyboard */; };
 		DD9B73D61BBEE28300AB2E6A /* News_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B73D51BBEE28300AB2E6A /* News_AppTests.m */; };
 		DD9B73E11BBEF60600AB2E6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9B73E01BBEF60600AB2E6A /* StoreKit.framework */; };
-		DD9B73E41BBEF77500AB2E6A /* ProSubscriptionService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B73E31BBEF77500AB2E6A /* ProSubscriptionService.m */; settings = {ASSET_TAGS = (); }; };
+		DD9B73E41BBEF77500AB2E6A /* ProSubscriptionService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B73E31BBEF77500AB2E6A /* ProSubscriptionService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,7 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Christensen (SMSAKC45Y7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "News App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,6 +428,7 @@
 				DD9B73DC1BBEE28300AB2E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD9B73DD1BBEE28300AB2E6A /* Build configuration list for PBXNativeTarget "News AppTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				DD9B73DF1BBEE28300AB2E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
